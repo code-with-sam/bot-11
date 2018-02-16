@@ -17,7 +17,7 @@ steem.api.streamTransactions('head', function(err, result) {
 });
 
 function sendVote(author, permlink, weight){
-  steem.broadcast.vote(ACCOUNT_KEY, ACCOUNT_NAME, author, permlink, 10000, function(err, result) {
+  steem.broadcast.vote(ACCOUNT_KEY, ACCOUNT_NAME, author, permlink, weight, function(err, result) {
     console.log(err, result)
     console.log(`WE have just copied @${TARGET_ACCOUNT} and also upvoted @${author}`)
   });
